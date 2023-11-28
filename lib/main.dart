@@ -13,14 +13,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-              scaffoldBackgroundColor: const Color.fromRGBO(58,76,122,1),
+              scaffoldBackgroundColor: const Color.fromRGBO(12, 19, 79,1),
               appBarTheme: const AppBarTheme(
                   titleSpacing: 20,
                   systemOverlayStyle: SystemUiOverlayStyle(
-                    statusBarColor: Color.fromRGBO(4,12,36, 1),
-                    statusBarIconBrightness: Brightness.dark,
+                    statusBarColor: Color.fromRGBO(92, 70, 156,1),
+                    statusBarIconBrightness: Brightness.light,
                   ),
-                  backgroundColor: Color.fromRGBO(4,12,36, 1),
+                  backgroundColor: Color.fromRGBO(92, 70, 156,1),
                   elevation: 0,
                   titleTextStyle: TextStyle(
                       color: Colors.white,
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
               ),
               colorScheme: ColorScheme.fromSeed(
                   seedColor: Colors.deepPurple,
-                  primary: const Color.fromRGBO(10,32,90,1)),
+                  primary: const Color.fromRGBO(212, 173, 252,1),),
               //useMaterial3: true,
             ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
