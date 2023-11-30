@@ -13,13 +13,13 @@ class InfinityCubit extends Cubit<InfinityState> {
     emit(InfinityGetAstronomyLoadingState());
     if (astronomy.isEmpty) {
       DioHelper.getData(
-          url: "planetary/apod/",
+          url: "planetary/apod",
           query: {
             "count" : "3",
-            "apikey" : "xqx9FyJ7gpYUYvfOLVr3nKdpLGpONdlKe4ejPXAk"
+            "api_key" : "xqx9FyJ7gpYUYvfOLVr3nKdpLGpONdlKe4ejPXAk"
           },).then((value) {
         astronomy = value!.data;
-        print(astronomy[0]["date"]);
+        print("Date = ${astronomy[0]["date"]}");
         emit(InfinityGetAstronomySuccessState());
       }).catchError((error){
         emit(InfinityGetAstronomyErrorState(error.toString()));

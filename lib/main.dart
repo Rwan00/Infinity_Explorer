@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinity_explorer/screens/astronomy_of_the_day.dart';
 import 'package:infinity_explorer/screens/home_screen.dart';
 
+
 import 'bloc_observer.dart';
 import 'cubits/app_cubit.dart';
 import 'helpers/dio_helper.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context)=> InfinityCubit(),
+      create: (BuildContext context)=> InfinityCubit()..getAstronomy(),
       child: MaterialApp(
         theme: ThemeData(
           scaffoldBackgroundColor: const Color.fromRGBO(12, 19, 79,1),
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
             primary: const Color.fromRGBO(212, 173, 252,1),),
           //useMaterial3: true,
         ),
-        home: const BusinessScreen(),
+        home: const DayAstronomy(),
       ),
     );
   }
